@@ -1,0 +1,132 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :auth:processResources NO-SOURCE
+> Task :instances:processResources NO-SOURCE
+> Task :monitoring:processResources NO-SOURCE
+> Task :content:processResources NO-SOURCE
+> Task :ai:processResources NO-SOURCE
+> Task :api:processResources NO-SOURCE
+> Task :forks:processResources NO-SOURCE
+> Task :security:processResources NO-SOURCE
+> Task :ui:processResources NO-SOURCE
+> Task :cloud:processResources NO-SOURCE
+> Task :skins:processResources NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :core:compileJava UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :core:classes UP-TO-DATE
+> Task :core:jar UP-TO-DATE
+> Task :monitoring:compileJava UP-TO-DATE
+> Task :monitoring:classes UP-TO-DATE
+> Task :monitoring:jar UP-TO-DATE
+> Task :forks:compileJava UP-TO-DATE
+> Task :forks:classes UP-TO-DATE
+> Task :content:compileJava UP-TO-DATE
+> Task :content:classes UP-TO-DATE
+> Task :forks:jar UP-TO-DATE
+> Task :skins:compileJava UP-TO-DATE
+> Task :skins:classes UP-TO-DATE
+> Task :content:jar UP-TO-DATE
+> Task :skins:jar UP-TO-DATE
+> Task :auth:compileJava UP-TO-DATE
+> Task :auth:classes UP-TO-DATE
+> Task :auth:jar UP-TO-DATE
+> Task :security:compileJava UP-TO-DATE
+> Task :security:classes UP-TO-DATE
+> Task :security:jar UP-TO-DATE
+> Task :ai:compileJava UP-TO-DATE
+> Task :ai:classes UP-TO-DATE
+> Task :ui:compileJava NO-SOURCE
+> Task :ui:classes UP-TO-DATE
+> Task :api:compileJava UP-TO-DATE
+> Task :api:classes UP-TO-DATE
+> Task :ai:jar UP-TO-DATE
+> Task :ui:jar UP-TO-DATE
+> Task :api:jar UP-TO-DATE
+> Task :cloud:compileJava UP-TO-DATE
+> Task :cloud:classes UP-TO-DATE
+> Task :cloud:jar UP-TO-DATE
+> Task :instances:compileJava UP-TO-DATE
+> Task :instances:classes UP-TO-DATE
+> Task :instances:jar UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+20:41:54.097 [main] INFO  c.q.QuantumLauncherApplication - Starting QuantumLauncherApplication using Java 21.0.9 with PID 35328 (C:\Users\Egor\IdeaProjects\Launcher\build\classes\java\main started by Egor in C:\Users\Egor\IdeaProjects\Launcher)
+20:41:54.098 [main] DEBUG c.q.QuantumLauncherApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+20:41:54.098 [main] INFO  c.q.QuantumLauncherApplication - No active profile set, falling back to 1 default profile: "default"
+20:41:54.612 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:41:54.671 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 8 JPA repository interfaces.
+20:41:55.435 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+20:41:55.448 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:41:55.451 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:41:55.453 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+20:41:55.553 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:41:55.553 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1393 ms
+20:41:56.028 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+20:41:56.070 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:41:56.178 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@455f4483
+20:41:56.180 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:41:56.895 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:41:57.344 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountsController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'microsoftAuthService': Unsatisfied dependency expressed through field 'accountRepository': No qualifying bean of type 'com.quantumlauncher.auth.repository.AccountRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+20:41:57.345 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+20:41:57.346 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:41:57.348 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:41:57.350 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+20:41:57.358 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+20:41:57.379 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field accountRepository in com.quantumlauncher.auth.service.MicrosoftAuthService required a bean of type 'com.quantumlauncher.auth.repository.AccountRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.quantumlauncher.auth.repository.AccountRepository' in your configuration.
+
+
+> Task :run FAILED
+
+[Incubating] Problems report is available at: file:///C:/Users/Egor/IdeaProjects/Launcher/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command 'C:\Program Files\Java\jdk-21\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.12/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 12s
+26 actionable tasks: 1 executed, 25 up-to-date
+0 was unexpected at this time.

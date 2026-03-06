@@ -1,0 +1,131 @@
+// QuantumLauncher - Build Configuration
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.quantumlauncher'
+version = '1.0.0-SNAPSHOT'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:3.2.0'
+    }
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    bootJar {
+        enabled = false
+    }
+
+    dependencies {
+        // Spring Boot
+        implementation 'org.springframework.boot:spring-boot-starter:3.2.0'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.2.0'
+        implementation 'org.springframework.boot:spring-boot-starter-web:3.2.0'
+
+        // Logging
+        implementation 'ch.qos.logback:logback-classic:1.4.14'
+        implementation 'org.slf4j:slf4j-api:2.0.9'
+
+        // Utils
+        implementation 'com.google.code.gson:gson:2.10.1'
+        implementation 'org.apache.commons:commons-lang3:3.14.0'
+
+        // Testing
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    }
+}
+
+dependencies {
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:21.0.1:win'
+    implementation 'org.openjfx:javafx-graphics:21.0.1:win'
+    implementation 'org.openjfx:javafx-fxml:21.0.1:win'
+    implementation 'org.openjfx:javafx-base:21.0.1:win'
+    implementation 'org.openjfx:javafx-base:21.0.1'
+
+    // Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+    // Database
+    implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
+    implementation 'org.hibernate.orm:hibernate-core:6.4.1.Final'
+    implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.1.Final'
+
+    // AI & ML (упрощённая версия без тяжёлых зависимостей)
+    // В production можно добавить: ai.djl, langchain4j
+    implementation 'org.jgrapht:jgrapht-core:1.5.2'
+
+    // Cloud (AWS S3)
+    implementation 'software.amazon.awssdk:s3:2.21.29'
+    implementation 'software.amazon.awssdk:regions:2.21.29'
+
+    // Archive handling
+    implementation 'org.apache.commons:commons-compress:1.25.0'
+    implementation 'net.lingala.zip4j:zip4j:2.11.5'
+
+    // HTTP
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    // Crypto
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.77'
+
+    // Project modules
+    implementation project(':core')
+    implementation project(':api')
+    implementation project(':ai')
+    implementation project(':content')
+    implementation project(':security')
+    implementation project(':cloud')
+    implementation project(':monitoring')
+    implementation project(':forks')
+    implementation project(':skins')
+    implementation project(':instances')
+    implementation project(':auth')
+    implementation project(':ui')
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+application {
+    mainClass = 'com.quantumlauncher.QuantumLauncherApplication'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.quantumlauncher.QuantumLauncherApplication',
+            'Implementation-Title': 'QuantumLauncher',
+            'Implementation-Version': version
+        )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

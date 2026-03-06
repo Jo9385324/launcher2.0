@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':core')
+    
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    // Security
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.77'
+    implementation 'commons-codec:commons-codec:1.16.0'
+}

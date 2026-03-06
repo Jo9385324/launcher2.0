@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: com.quantumlauncher.QuantumLauncherApplication
+Implementation-Title: QuantumLauncher
+Implementation-Version: 1.0.0-SNAPSHOT
+

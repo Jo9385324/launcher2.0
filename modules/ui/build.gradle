@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':ai')
+    implementation project(':content')
+    implementation project(':forks')
+    implementation project(':security')
+    implementation project(':skins')
+    implementation project(':monitoring')
+    
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:21.0.1:win'
+    implementation 'org.openjfx:javafx-graphics:21.0.1:win'
+    implementation 'org.openjfx:javafx-fxml:21.0.1:win'
+    implementation 'org.openjfx:javafx-base:21.0.1:win'
+
+    // Spring
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework:spring-context'
+    
+    // Utils
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

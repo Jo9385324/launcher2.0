@@ -1,0 +1,358 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   QuantumLauncher - Quantum Theme CSS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base Styles
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.root {
+    -fx-font-family: 'Segoe UI', 'Roboto', sans-serif;
+    -fx-background-color: #0a0e17;
+    -fx-text-fill: #ffffff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Scroll Bars
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #1a2332;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #00d4ff;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #00a8cc;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Buttons
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent;
+    -fx-transition: all 0.2s ease;
+}
+
+.button:hover {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #00d4ff;
+}
+
+.button:pressed {
+    -fx-background-color: #00d4ff;
+    -fx-text-fill: #000000;
+}
+
+/* Primary Button */
+.button-primary {
+    -fx-background-color: #00d4ff;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: #00a8cc;
+}
+
+/* Secondary Button */
+.button-secondary {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00d4ff;
+    -fx-border-width: 1;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #243447;
+}
+
+/* Navigation Button */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 15;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #00d4ff;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #00d4ff;
+    -fx-text-fill: #000000;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Text Fields
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.text-field {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #666666;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 15;
+}
+
+.text-field:focused {
+    -fx-border-color: #00d4ff;
+    -fx-border-width: 2;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Labels
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+.label-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00d4ff;
+}
+
+.label-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #888888;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   List View
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #1a2332;
+    -fx-border-radius: 8;
+}
+
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10 15;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #1a2332;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #1a2332;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Cards / Panels
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.card {
+    -fx-background-color: #0d1321;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropShadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.card:hover {
+    -fx-background-color: #0f1729;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Progress Bar
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.progress-bar {
+    -fx-background-color: #1a2332;
+    -fx-background-radius: 4;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #00d4ff;
+    -fx-background-radius: 4;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tabs
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-text-fill: #888888;
+    -fx-padding: 10 20;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00d4ff;
+    -fx-border-color: #00d4ff;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Context Menu
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.context-menu {
+    -fx-background-color: #0d1321;
+    -fx-border-color: #1a2332;
+    -fx-border-radius: 8;
+}
+
+.context-menu .menu-item {
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 15;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #1a2332;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Tooltip
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.tooltip {
+    -fx-background-color: #0d1321;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00d4ff;
+    -fx-border-radius: 4;
+    -fx-padding: 8 12;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Separators
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.separator {
+    -fx-background-color: #1a2332;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ComboBox
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.combo-box {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1a2332;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #243447;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #0d1321;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CheckBox
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.check-box .box {
+    -fx-background-color: #1a2332;
+    -fx-border-color: #00d4ff;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #00d4ff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Radio Button
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.radio-button .radio {
+    -fx-background-color: #1a2332;
+    -fx-border-color: #00d4ff;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #00d4ff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Animations (Quantum Glow Effect)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@keyframes quantum-pulse {
+    0%, 100% {
+        -fx-effect: dropShadow(gaussian, rgba(0,212,255,0.3), 10, 0, 0, 0);
+    }
+    50% {
+        -fx-effect: dropShadow(gaussian, rgba(0,212,255,0.6), 15, 0, 0, 0);
+    }
+}
+
+.quantum-glow {
+    -fx-effect: dropShadow(gaussian, rgba(0,212,255,0.3), 10, 0, 0, 0);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ScrollPane
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Toggle Button
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #1a2332;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #00d4ff;
+    -fx-text-fill: #000000;
+}

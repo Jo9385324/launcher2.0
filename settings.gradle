@@ -1,0 +1,29 @@
+rootProject.name = 'QuantumLauncher'
+
+include 'core'
+include 'api'
+include 'ai'
+include 'content'
+include 'skins'
+include 'forks'
+include 'security'
+include 'cloud'
+include 'monitoring'
+include 'ui'
+include 'instances'
+include 'auth'
+
+// Указываем пути к модулям
+project(':core').projectDir = new File(rootProject.projectDir, 'modules/core')
+project(':api').projectDir = new File(rootProject.projectDir, 'modules/api')
+project(':ai').projectDir = new File(rootProject.projectDir, 'modules/ai')
+project(':content').projectDir = new File(rootProject.projectDir, 'modules/content')
+project(':skins').projectDir = new File(rootProject.projectDir, 'modules/skins')
+project(':forks').projectDir = new File(rootProject.projectDir, 'modules/forks')
+project(':security').projectDir = new File(rootProject.projectDir, 'modules/security')
+project(':cloud').projectDir = new File(rootProject.projectDir, 'modules/cloud')
+project(':monitoring').projectDir = new File(rootProject.projectDir, 'modules/monitoring')
+project(':ui').projectDir = new File(rootProject.projectDir, 'modules/ui')
+project(':instances').projectDir = new File(rootProject.projectDir, 'modules/instances')
+project(':auth').projectDir = new File(rootProject.projectDir, 'modules/auth')
+

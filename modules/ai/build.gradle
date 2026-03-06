@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation project(':core')
+    
+    // AI / ML - упрощённая реализация (без тяжёлых внешних библиотек)
+    // В production можно добавить: ai.djl, langchain4j
+
+    // Graph Algorithms (для анализа конфликтов)
+    implementation 'org.jgrapht:jgrapht-core:1.5.2'
+    
+    // Spring
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Jakarta Annotation (для @PostConstruct)
+    implementation 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+}

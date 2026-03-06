@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.quantumlauncher.ui.controller.AIAssistantController"
+            style="-fx-background-color: #0a0e17;">
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            
+            <!-- Header -->
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Label text="🤖 AI Ассистент" 
+                       style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #00d4ff;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="statusLabel" text="Готов" 
+                       style="-fx-text-fill: #00ff88;"/>
+            </HBox>
+            
+            <!-- Action Buttons -->
+            <HBox spacing="10">
+                <Button fx:id="btnAnalyzeConflicts" text="🔍 Анализ конфликтов" 
+                        style="-fx-background-color: #1a2332; -fx-text-fill: #fff; 
+                               -fx-padding: 10 20;"/>
+                <Button fx:id="btnOptimize" text="⚡ Оптимизация" 
+                        style="-fx-background-color: #1a2332; -fx-text-fill: #fff; 
+                               -fx-padding: 10 20;"/>
+                <Button fx:id="btnClear" text="🗑 Очистить" 
+                        style="-fx-background-color: #1a2332; -fx-text-fill: #fff; 
+                               -fx-padding: 10 20;"/>
+            </HBox>
+            
+            <!-- Progress -->
+            <ProgressBar fx:id="analysisProgress" 
+                         style="-fx-background-color: #1a2332;" 
+                         progress="0"/>
+            
+            <!-- Chat Area -->
+            <VBox VBox.vgrow="ALWAYS">
+                <Label text="Чат с AI" style="-fx-text-fill: #888; -fx-font-size: 12;"/>
+                <TextArea fx:id="chatHistory" 
+                          style="-fx-background-color: #0d1321; -fx-text-fill: #fff; 
+                                 -fx-border-color: #1a2332; -fx-font-family: Consolas;" 
+                          VBox.vgrow="ALWAYS" editable="false" wrapText="true"/>
+            </VBox>
+            
+            <!-- Input -->
+            <HBox spacing="10">
+                <TextField fx:id="userInput" 
+                           promptText="Введите ваш вопрос..." 
+                           style="-fx-background-color: #1a2332; -fx-text-fill: #fff; 
+                                  -fx-prompt-text-fill: #666; -fx-padding: 10;" 
+                           HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnSend" text="Отправить" 
+                        style="-fx-background-color: #00d4ff; -fx-text-fill: #000; 
+                               -fx-font-weight: bold; -fx-padding: 10 20;"/>
+            </HBox>
+            
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #0a0e17;" fitToWidth="true">
+
+    <VBox style="-fx-padding: 30;" spacing="25">
+        
+        <Label text="⚙️ Настройки" 
+               style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #00d4ff;"/>
+        
+        <!-- Java -->
+        <VBox spacing="10" style="-fx-background-color: #0d1321; -fx-padding: 20; 
+                                 -fx-background-radius: 12;">
+            <Label text="Java" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Путь к Java:" style="-fx-text-fill: #888;"/>
+                <TextField style="-fx-background-color: #1a2332; -fx-text-fill: white; 
+                                 -fx-pref-width: 400;"/>
+                <Button text="Обзор" style="-fx-background-color: #1a2332; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Память -->
+        <VBox spacing="10" style="-fx-background-color: #0d1321; -fx-padding: 20; 
+                                 -fx-background-radius: 12;">
+            <Label text="Память по умолчанию" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Минимум:" style="-fx-text-fill: #888;"/>
+                <Slider min="512" max="8192" value="2048" showTickLabels="true" 
+                        style="-fx-pref-width: 200;"/>
+                <Label text="2048 MB" style="-fx-text-fill: #00d4ff;"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Максимум:" style="-fx-text-fill: #888;"/>
+                <Slider min="1024" max="16384" value="4096" showTickLabels="true" 
+                        style="-fx-pref-width: 200;"/>
+                <Label text="4096 MB" style="-fx-text-fill: #00d4ff;"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Внешний вид -->
+        <VBox spacing="10" style="-fx-background-color: #0d1321; -fx-padding: 20; 
+                                 -fx-background-radius: 12;">
+            <Label text="Внешний вид" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            
+            <CheckBox text="Тёмная тема" selected="true" 
+                      style="-fx-text-fill: white;"/>
+            <CheckBox text="Анимации" selected="true" 
+                      style="-fx-text-fill: white;"/>
+            <CheckBox text="3D Preview персонажа" selected="true" 
+                      style="-fx-text-fill: white;"/>
+        </VBox>
+        
+        <!-- Облако -->
+        <VBox spacing="10" style="-fx-background-color: #0d1321; -fx-padding: 20; 
+                                 -fx-background-radius: 12;">
+            <Label text="Облачная синхронизация" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="S3 Endpoint:" style="-fx-text-fill: #888;"/>
+                <TextField promptText="s3.amazonaws.com" 
+                           style="-fx-background-color: #1a2332; -fx-text-fill: white; 
+                                  -fx-pref-width: 300;"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Bucket:" style="-fx-text-fill: #888;"/>
+                <TextField promptText="my-launcher-backups" 
+                           style="-fx-background-color: #1a2332; -fx-text-fill: white; 
+                                  -fx-pref-width: 300;"/>
+            </HBox>
+            
+            <Button text="Проверить подключение" 
+                    style="-fx-background-color: #1a2332; -fx-text-fill: white;"/>
+        </VBox>
+        
+        <!-- Сохранить -->
+        <Button text="💾 Сохранить настройки" 
+                style="-fx-background-color: #00d4ff; -fx-text-fill: #000;
+                       -fx-font-size: 16; -fx-font-weight: bold;
+                       -fx-padding: 15 30;"/>
+        
+    </VBox>
+    
+</ScrollPane>

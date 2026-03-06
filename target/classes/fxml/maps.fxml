@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #0a0e17;">
+
+    <left>
+        <VBox style="-fx-pref-width: 350; -fx-background-color: #0d1321;">
+            
+            <HBox style="-fx-padding: 20; -fx-background-color: #0a0e17;">
+                <Label text="🗺️ Карты" 
+                       style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #00d4ff;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="addMapButton" text="+" 
+                        style="-fx-background-color: #00d4ff; -fx-text-fill: #000; 
+                               -fx-font-size: 18; -fx-font-weight: bold;
+                               -fx-min-width: 35; -fx-min-height: 35;"/>
+            </HBox>
+            
+            <HBox style="-fx-padding: 10;" spacing="10">
+                <ComboBox fx:id="instanceSelector" promptText="Выберите инстанс" 
+                          style="-fx-pref-width: 200;"/>
+            </HBox>
+            
+            <Separator style="-fx-background-color: #1a2332;"/>
+            
+            <ListView fx:id="mapsListView" 
+                      style="-fx-background-color: transparent; -fx-padding: 10;" 
+                      VBox.vgrow="ALWAYS"/>
+            
+        </VBox>
+    </left>
+
+    <center>
+        <VBox fx:id="detailsPanel" style="-fx-padding: 30;" spacing="20">
+            
+            <Label text="Детали карты" 
+                   style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            
+            <VBox spacing="10">
+                <Label fx:id="mapNameLabel" text="Название" 
+                       style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #00d4ff;"/>
+                
+                <HBox spacing="20">
+                    <VBox>
+                        <Label text="Версия" style="-fx-font-size: 12; -fx-text-fill: #888;"/>
+                        <Label fx:id="mapVersionLabel" text="N/A" 
+                               style="-fx-font-size: 14; -fx-text-fill: white;"/>
+                    </VBox>
+                    <VBox>
+                        <Label text="Автор" style="-fx-font-size: 12; -fx-text-fill: #888;"/>
+                        <Label fx:id="mapAuthorLabel" text="Unknown" 
+                               style="-fx-font-size: 14; -fx-text-fill: white;"/>
+                    </VBox>
+                    <VBox>
+                        <Label text="Тип" style="-fx-font-size: 12; -fx-text-fill: #888;"/>
+                        <Label fx:id="mapTypeLabel" text="N/A" 
+                               style="-fx-font-size: 14; -fx-text-fill: white;"/>
+                    </VBox>
+                    <VBox>
+                        <Label text="Игроки" style="-fx-font-size: 12; -fx-text-fill: #888;"/>
+                        <Label fx:id="mapPlayersLabel" text="N/A" 
+                               style="-fx-font-size: 14; -fx-text-fill: white;"/>
+                    </VBox>
+                </HBox>
+                
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Статус: " style="-fx-font-size: 14; -fx-text-fill: #888;"/>
+                    <Label fx:id="mapStatusLabel" text="Выкл" 
+                           style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+                </HBox>
+            </VBox>
+            
+            <VBox>
+                <Label text="Описание" style="-fx-font-size: 14; -fx-text-fill: #888;"/>
+                <TextArea fx:id="mapDescriptionArea" 
+                          style="-fx-pref-height: 150; -fx-background-color: #1a2332; 
+                                 -fx-text-fill: white;" 
+                          editable="false" wrapText="true"/>
+            </VBox>
+            
+            <HBox spacing="10">
+                <Button fx:id="enableButton" text="Включить" 
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button fx:id="disableButton" text="Отключить" 
+                        style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+                <Button fx:id="deleteButton" text="Удалить" 
+                        style="-fx-background-color: #FF9800; -fx-text-fill: white;"/>
+            </HBox>
+            
+        </VBox>
+    </center>
+
+</BorderPane>

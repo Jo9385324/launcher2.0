@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #0a0e17;">
+
+    <center>
+        <HBox style="-fx-padding: 30;" spacing="30">
+            
+            <!-- 3D Preview -->
+            <VBox spacing="20">
+                <Label text="👤 3D Preview" 
+                       style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                
+                <StackPane style="-fx-background-color: #0d1321; 
+                                 -fx-pref-width: 300; -fx-pref-height: 400;
+                                 -fx-background-radius: 12;">
+                    <Label text="3D Модель" style="-fx-text-fill: #666;"/>
+                </StackPane>
+                
+                <Button text="Загрузить скин" 
+                        style="-fx-background-color: #00d4ff; -fx-text-fill: #000;
+                               -fx-padding: 12 24;"/>
+            </VBox>
+            
+            <!-- Список скинов -->
+            <VBox spacing="15" HBox.hgrow="ALWAYS">
+                <Label text="Мои скины" 
+                       style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                
+                <ListView style="-fx-background-color: #0d1321;" 
+                          VBox.vgrow="ALWAYS"/>
+                
+                <HBox spacing="10">
+                    <Button text="Загрузить плащ" 
+                            style="-fx-background-color: #1a2332; -fx-text-fill: white;"/>
+                    <Button text="Стандартные скины" 
+                            style="-fx-background-color: #1a2332; -fx-text-fill: white;"/>
+                </HBox>
+            </VBox>
+            
+        </HBox>
+    </center>
+
+</BorderPane>
