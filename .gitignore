@@ -28,3 +28,17 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Gradle ###
+build/
+gradle810-temp/
+.gradle/
+gradle/
+
+### Logs ###
+logs/
+run.log
+error.log
+
+### Data ###
+data/
